@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoices</title>
+    <object th:include="fragments/resources :: head" th:remove="tag"></object>
+
+</head>
+<body>
+
+<h1 class="header">invoices</h1>
+<header>
+    <object th:include="fragments/navigation :: menu" th:remove="tag"></object>
+</header>
+<br>
+<br>
+<br>
+<form method="post" th:action="@{/logout}">
+    <button>Sign Out</button>
+</form>
+<br>
+<br>
+<table>
+    <tr>
+        <th>Patient</th>
+        <th>Kind</th>
+        <th>Symptoms</th>
+        <th>Diagnosis</th>
+        <th>Provided</th>
+        <th>Cost</th>
+        <th>Timestamp</th>
+    </tr>
+
+    <tbody>
+    <tr th:each="invoice : ${invoices}" th:object="${invoice}">
+        <td th:text="${invoice.patient.name}">Patient</td>
+        <td th:text="*{kind}">Kind</td>
+        <td th:text="*{symptoms}">Symptoms</td>
+        <td th:text="${invoice.diagnosis}">Diagnosis</td>
+        <td th:text="${invoice.provided}">Provided</td>
+        <td th:text="${invoice.cost}">Cost</td>
+        <td th:text="${invoice.timestamp}">Timestamp</td>
+
+        <td th:if="${invoice.paid == false}">
+            <form method="post" th:action="@{/invoices/paid}">
+                <input id="buttonAsPaid" name="id" th:value="${invoice.id}" type="hidden"/>
+                <button>mark as paid</button>
+            </form>
+        </td>
+        <td th:if="${invoice.paid == true}">paid</td>
+    </tr>
+    </tbody>
+</table>
+
+
+</form>
+</body>
+</html>

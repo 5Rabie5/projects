@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="administration" />
+        <module name="drhouse-accountancy" />
+        <module name="drhouse-administration" />
+        <module name="drhouse-admission" />
+        <module name="drhouse-beds" />
+        <module name="drhouse-diagnoses" />
+        <module name="drhouse-pharmacy" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="administration" target="11" />
+      <module name="demo" target="11" />
+      <module name="drhouse-accountancy" target="11" />
+      <module name="drhouse-administration" target="11" />
+      <module name="drhouse-admission" target="11" />
+      <module name="drhouse-beds" target="11" />
+      <module name="drhouse-diagnoses" target="11" />
+      <module name="drhouse-pharmacy" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="administration" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="drhouse-accountancy" options="-parameters" />
+      <module name="drhouse-administration" options="-parameters" />
+      <module name="drhouse-admission" options="-parameters" />
+      <module name="drhouse-beds" options="-parameters" />
+      <module name="drhouse-diagnoses" options="-parameters" />
+      <module name="drhouse-pharmacy" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/drhouse-admission/pom.xml" />
+        <option value="$PROJECT_DIR$/drhouse-diagnoses/pom.xml" />
+        <option value="$PROJECT_DIR$/drhouse-beds/pom.xml" />
+        <option value="$PROJECT_DIR$/drhouse-pharmacy/pom.xml" />
+        <option value="$PROJECT_DIR$/drhouse-accountancy/pom.xml" />
+        <option value="$PROJECT_DIR$/administration/pom.xml" />
+        <option value="$PROJECT_DIR$/drhouse-administration/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

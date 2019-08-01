@@ -1,0 +1,14 @@
+server:
+  port: 9000
+
+admission:
+  server:
+    url: http://localhost:9001/patients
+
+symptoms:
+  server:
+    url: http://localhost:9002/symptoms
+
+accountant:
+  server:
+    url: http://localhost:9005/invoices

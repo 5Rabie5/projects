@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/drhouse-accountancy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/drhouse-administration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/drhouse-admission" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/drhouse-beds" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/drhouse-diagnoses" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/drhouse-pharmacy" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <title>NACS Hospital</title>
+    <object th:include="fragments/resources :: head" th:remove="tag"></object>
+
+</head>
+<body>
+
+<h1>NACS Hospital</h1>
+<header>
+    <object th:include="fragments/navigation :: menu" th:remove="tag"></object>
+</header>
+<br>
+<br>
+<br>
+<form method="post" th:action="@{/}" th:object="${patient}">
+    <label>Enter your name</label>
+    <input th:field="*{name}" type="text"/>
+    <br> <br><br><br>
+    <label>Enter your symptoms</label>
+    <!--<input th:field="*{symptoms}" type="text"/>-->
+    <select th:field="*{symptoms}">
+        <option th:each="symptom : ${symptoms}" th:value="${symptom}" th:text="${symptom}"> option</option>
+    </select>
+    <br><br><br><br>
+    <button type="submit">Submit</button>
+    <p th:errors="*{name}" th:if="${#fields.hasErrors('name')}">Cannot be empty</p>
+    <br><br><br>
+    <a th:href="@{/invoices}">>>>>>> Invoic page</a>
+</form>
+</body>
+</html>

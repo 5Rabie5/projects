@@ -1,0 +1,55 @@
+label {
+    font-size: 2em;
+    text-align: center;
+    /*color: greenyellow;*/
+}
+
+input {
+    font-size: 2em;
+    text-align: center;
+    color: red;
+}
+
+body {
+    background-image: url("nurse-2141808_1920.jpg");
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    color: firebrick;
+}
+
+button {
+    font-size: 1em;
+    text-align: center;
+    color: firebrick;
+    size: auto;
+}
+
+select {
+    font-size: 2em;
+    text-align: center;
+    color: firebrick;
+    size: auto;
+}
+
+td {
+    font-size: 1em;
+    position: center;
+}
+
+tr {
+    position: -ms-device-fixed;
+}
+
+.header {
+    color: yellow;
+}
+
+#buttonAsPaid {
+    font-size: 0.5em;
+    text-align: center;
+    color: firebrick;
+    size: auto;
+}

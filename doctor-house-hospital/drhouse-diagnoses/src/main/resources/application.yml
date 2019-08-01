@@ -1,0 +1,21 @@
+server:
+  port: 9002
+info:
+  symptomsbank:
+    defensiveVoltage: 10
+    fear: 200
+    aphthousUlcers: 300
+  diagnosisbank:
+    10: epistaxis
+    300: internists
+    200: noseinfection
+beds:
+  server:
+    url: http://localhost:9003/patients
+pharmacy:
+  server:
+    url: http://localhost:9004/patients
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/symptoms

@@ -1,0 +1,12 @@
+server:
+  port: 9003
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/beds
+
+info:
+  tretmentsbank:
+    epistaxis: rest10days
+    internists: antibiotic
+    noseinfection: antibiotic2

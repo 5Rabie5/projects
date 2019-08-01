@@ -1,0 +1,10 @@
+server:
+  port: 9005
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/drhouse-invoice?useSSL=false
+    username: r5user
+    password: nacs
+  jpa:
+    hibernate:
+      ddl-auto: update
