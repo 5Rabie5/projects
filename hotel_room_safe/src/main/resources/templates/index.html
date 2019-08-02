@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Templating</title>
+
+    <meta charset="UTF-8"/>
+
+    <link media="all" rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+
+</head>
+<body >
+<br><br><br><br><br><br><br><br><br>
+<h1>NACS Hotele</h1>
+
+<a th:href="@{/guest}">My Room</a>
+<br><br><br>
+<form method="post" th:action="@{/logout}">
+    <button>Sign Out</button>
+</form>
+
+</body>
+</html>

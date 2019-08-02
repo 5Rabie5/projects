@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk
+    environment:
+      PROJECT_DOMAIN: 5rabie5
+      PROJECT_NAME: w13-project01
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: Testing
+          command: mvn test
+      - setup_remote_docker
+      - run:
+          name: Install Docker client
+          command: |
+            set -x
+            VER="17.03.0-ce"
+            curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            sudo cp -r /tmp/docker/* /usr/bin
+      - run:
+          name: Deploy to DockerHub
+          command: |
+            mvn clean package -DskipTests=true
+            docker build -t $PROJECT_DOMAIN/$PROJECT_NAME:$CIRCLE_BUILD_NUM .
+            docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USER" -p="$DOCKER_PASSWORD"
+            docker push $PROJECT_DOMAIN/$PROJECT_NAME:$CIRCLE_BUILD_NUM
+            docker tag $PROJECT_DOMAIN/$PROJECT_NAME:$CIRCLE_BUILD_NUM $PROJECT_DOMAIN/$PROJECT_NAME:latest
+            docker push $PROJECT_DOMAIN/$PROJECT_NAME:latest
