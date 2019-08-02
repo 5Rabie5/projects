@@ -1,2 +1,16 @@
-# i4-microservices
-Microservices examples
+# morse-encoder ....Microservices
+ 
+
+What: in this application you can be coding any text you want by using morse-code
+
+Contents of apps: discovery, configuration, admin, morse, encoder
+
+Overview: when the user sends a text to code it :
+
+1. The encoder will receive it (by posting it at http://localhost:8000/encode) and send it letter by letter to morse which returned it as morse alphabet
+2. discovery, configuration, admin: microservice infrastructure
+ 
+
+
+
+Technology stack: Java 11, Spring Boot,netflix-eureka-server,ConfigServer,AdminServer,FeignClient ...
